@@ -1,75 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KORE by D'SEIKOU | Coming Soon</title>
-    <meta
-      name="description"
-      content="Made with intention. Made by hand. Made for you by D'SEIKOU. Join the waitlist."
-    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KORÉ by D'SEIKOU | Coming Soon</title>
+  <meta name="description" content="Made with intention. Made by hand. Made for you by D'SEIKOU. Join the waitlist." />
 
-  <body>
-    <main class="hero">
-      <p class="intro">
-        <span class="line" style="--d: 0">
-          Every piece starts in the quiet space between imagination and creation.
-        </span>
-        <span class="line" style="--d: 1">
-          Born from a simple, grounding philosophy:
-        </span>
-        <span class="line strong" style="--d: 2">
-          This, your vision, made for you to last.
-        </span>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="hero">
+    <p class="intro">
+      <span class="line" style="--d: 0">
+        Every piece starts in the quiet space between imagination and creation.
+      </span>
+      <span class="line" style="--d: 1">
+        Born from a simple, grounding philosophy:
+      </span>
+      <span class="line strong" style="--d: 2">
+        This, your vision, made for you to last.
+      </span>
+    </p>
+
+    
+<div class="logo">
+  <img
+    src="/kore-logo.png"
+    alt="KORÉ by D'SEIKOU"
+    class="logo-image"
+  />
+</div>
+
+    <div class="outro">
+      <p class="line" style="--d: 4">Made with intention. Made by hand. Made for you by D'SEIKOU.</p>
+      <p class="line" style="--d: 5">Designed to be lived with, loved, and passed down.</p>
+      <p class="line" style="--d: 6">
+        Because some things aren't meant to be replaced. They're meant to be inherited.
       </p>
+    </div>
 
-      <div class="logo" aria-label="KORE by D'SEIKOU">
-        <h1 class="wordmark">
-          <span>K</span><span>O</span><span>R</span><span>E</span>
-        </h1>
-        <div class="stroke" aria-hidden="true"></div>
-        <span class="by">by D'SEIKOU</span>
-      </div>
+    <form id="waitlist-form" class="signup" novalidate>
+      <label for="email" class="sr-only">Email address</label>
+      <input id="email" type="email" name="email" placeholder="your@email.com" autocomplete="email" required />
+      <button id="cta" class="cta" type="submit">
+        <span class="cta-label">Join the waitlist</span>
+        <span class="cta-arrow" aria-hidden="true">&rarr;</span>
+        <span class="cta-spinner" aria-hidden="true"></span>
+      </button>
+    </form>
 
-      <div class="outro">
-        <p class="line" style="--d: 4">Made with intention. Made by hand. Made for you by D'SEIKOU.</p>
-        <p class="line" style="--d: 5">Designed to be lived with, loved, and passed down.</p>
-        <p class="line" style="--d: 6">
-          Because some things aren't meant to be replaced. They're meant to be inherited.
-        </p>
-      </div>
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+  </main>
 
-      <form id="waitlist-form" class="signup" novalidate>
-        <label for="email" class="sr-only">Email address</label>
-        <input
-          id="email"
-          type="email"
-          name="email"
-          placeholder="your@email.com"
-          autocomplete="email"
-          required
-        />
-        <button id="cta" class="cta" type="submit">
-          <span class="cta-label">Join the waitlist</span>
-          <span class="cta-arrow" aria-hidden="true">&rarr;</span>
-          <span class="cta-spinner" aria-hidden="true"></span>
-        </button>
-      </form>
+  <footer class="footer">&copy; 2026 D'SEIKOU</footer>
 
-      <p id="status" class="status" role="status" aria-live="polite"></p>
-    </main>
+  <script src="script.js"></script>
+</body>
 
-    <footer class="footer">&copy; 2026 D'SEIKOU</footer>
-
-    <script src="script.js"></script>
-  </body>
 </html>

@@ -5,6 +5,8 @@
   const label = button.querySelector('.cta-label');
   const status = document.getElementById('status');
 
+  const ENDPOINT = 'https://script.google.com/macros/s/AKfycbwnw4ETu4I6mdFd43rw1Xpt4k315UwOErdu0ItS9t4_OrV8dxi743IK0Wf8DAxvuCxN/exec';
+
   const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   function setStatus(message, type) {
@@ -21,8 +23,7 @@
 
   function shake() {
     form.classList.remove('shake');
-    // Force reflow so the animation can replay
-    void form.offsetWidth;
+    void form.offsetWidth; // force reflow so the animation can replay
     form.classList.add('shake');
   }
 
@@ -42,9 +43,10 @@
     setStatus('');
 
     try {
-      const response = await fetch('/api/waitlist', {
+      const response = await fetch(ENDPOINT, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        // No Content-Type header — Apps Script handles this as text/plain
+        // and avoids a CORS preflight it can't answer.
         body: JSON.stringify({ email }),
       });
 
@@ -57,11 +59,11 @@
       setLoading(false);
       button.classList.add('success');
       label.textContent = "You're on the list";
-      setStatus(data.message, 'ok');
+      setStatus(data.message || "You're on the list. Nothing to do now but wait and trust the process.", 'ok');
       form.reset();
     } catch (err) {
       setLoading(false);
-      setStatus(err.message, 'error');
+      setStatus(err.message || 'Something went wrong. Please try again.', 'error');
       shake();
     }
   });

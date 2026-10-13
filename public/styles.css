@@ -1,8 +1,8 @@
 :root {
-  --paper: #eeefea;
-  --gold: #fba516;
-  --ink: #0f0f0f;
-  --error: #b42318;
+  --paper: #efefe9;
+  --gold: #fca311;
+  --ink: #11100f;
+  --error: #be001c;
   --ok: #1b6b3a;
 }
 
@@ -74,89 +74,24 @@ body {
 
 /* ---------- Logo ---------- */
 
+
 .logo {
-  position: relative;
-  display: inline-block;
-  margin: 28px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 28px auto;
   padding: 0 16px;
 }
 
-.wordmark {
-  position: relative;
-  z-index: 0;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  font-family: Anton, Impact, 'Arial Narrow', sans-serif;
-  font-weight: 400;
-  font-size: clamp(88px, 17vw, 200px);
-  line-height: 0.9;
-  letter-spacing: -0.01em;
-  color: var(--gold);
-  transform: skewX(-6deg);
+.logo-image {
+  display: block;
+  width: min(100%, 560px);
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
 }
 
-.wordmark span {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(40px) rotate(-6deg);
-  animation: drop 0.8s cubic-bezier(0.3, 1.4, 0.5, 1) forwards;
-}
-
-.wordmark span:nth-child(1) { animation-delay: 0.5s; }
-.wordmark span:nth-child(2) { animation-delay: 0.65s; }
-.wordmark span:nth-child(3) { animation-delay: 0.8s; }
-.wordmark span:nth-child(4) { animation-delay: 0.95s; }
-
-@keyframes drop {
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-/* Black brush swoosh that sweeps across the wordmark */
-.stroke {
-  position: absolute;
-  z-index: 1;
-  top: 40%;
-  left: 28%;
-  right: -4%;
-  height: 16%;
-  background: var(--ink);
-  clip-path: polygon(0 45%, 100% 0, 100% 100%, 0 55%);
-  transform-origin: left center;
-  transform: rotate(-14deg) scaleX(0);
-  animation: swipe 1s cubic-bezier(0.7, 0, 0.2, 1) 1.25s forwards;
-}
-
-@keyframes swipe {
-  to {
-    transform: rotate(-14deg) scaleX(1);
-  }
-}
-
-.by {
-  position: absolute;
-  z-index: 2;
-  top: 43%;
-  left: 62%;
-  transform: rotate(-14deg);
-  font-size: clamp(9px, 1.2vw, 13px);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--gold);
-  opacity: 0;
-  animation: fade 0.6s ease 1.9s forwards;
-  white-space: nowrap;
-}
-
-@keyframes fade {
-  to {
-    opacity: 1;
-  }
-}
 
 /* ---------- Signup form ---------- */
 
@@ -170,6 +105,11 @@ body {
   background: var(--paper);
   opacity: 0;
   animation: fade 0.8s ease 2.4s forwards;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 .signup input {
