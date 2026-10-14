@@ -4,45 +4,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KORÉ by D'SEIKOU | Coming Soon</title>
-  <meta name="description" content="Made with intention. Made by hand. Made for you by D'SEIKOU. Join the waitlist." />
+
+  <title>KORÉ by D'SEIKOU | Handcrafted Luxury Goods — Join the Waitlist</title>
+  <meta name="description" content="KORÉ by D'SEIKOU creates handcrafted luxury goods made with intention, designed to be lived with and passed down. Join the waitlist for early access to our first collection." />
+  <link rel="canonical" href="https://kore.dseikou.co.za/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="KORÉ by D'SEIKOU | Handcrafted Luxury Goods" />
+  <meta property="og:description" content="Made with intention. Made by hand. Made for you. Join the waitlist." />
+  <meta property="og:url" content="https://kore.dseikou.co.za/" />
+  <meta property="og:image" content="https://kore.dseikou.co.za/kore-logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;600;700&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Organization schema: tells Google + AI who you are -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "KORÉ by D'SEIKOU",
+    "alternateName": "KORÉ",
+    "url": "https://kore.dseikou.co.za",
+    "logo": "https://kore.dseikou.co.za/kore-logo.png",
+    "description": "KORÉ by D'SEIKOU creates handcrafted luxury goods made with intention, designed to be lived with and passed down.",
+    "foundingDate": "2026",
+    "founder": {
+      "@type": "Person",
+      "name": "D'SEIKOU"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "ZA"
+    },
+    "sameAs": [
+      "https://www.instagram.com/dseikou",
+      "https://www.linkedin.com/company/dseikou"
+    ]
+  }
+  </script>
+
+  <!-- FAQ schema: this is what gets lifted into AI answers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is KORÉ by D'SEIKOU?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "KORÉ by D'SEIKOU is a handcrafted luxury goods brand. Every piece is made by hand with intention, and designed to be lived with, loved, and passed down rather than replaced."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does KORÉ by D'SEIKOU make?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "KORÉ by D'SEIKOU creates handcrafted, intentional objects designed for long-term use and inheritance. The first collection is currently in development."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When will KORÉ by D'SEIKOU launch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "KORÉ by D'SEIKOU is launching its first collection soon. Join the waitlist for early access and first notification."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is KORÉ by D'SEIKOU based?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "KORÉ by D'SEIKOU is based in South Africa and ships worldwide."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
   <main class="hero">
+
+    <!-- H1: search engines and AI need this -->
+    <h1 class="sr-only">KORÉ by D'SEIKOU — Handcrafted luxury goods made with intention</h1>
+
     <p class="intro">
-      <span class="line" style="--d: 0">
-        Every piece starts in the quiet space between imagination and creation.
-      </span>
-      <span class="line" style="--d: 1">
-        Born from a simple, grounding philosophy:
-      </span>
-      <span class="line strong" style="--d: 2">
-        This, your vision, made for you to last.
-      </span>
+      <span class="line" style="--d: 0">Every piece starts in the quiet space between imagination and creation.</span>
+      <span class="line" style="--d: 1">Born from a simple, grounding philosophy:</span>
+      <span class="line strong" style="--d: 2">This, your vision, made for you to last.</span>
     </p>
 
-    
-<div class="logo">
-  <img
-    src="/kore-logo.png"
-    alt="KORÉ by D'SEIKOU"
-    class="logo-image"
-  />
-</div>
+    <div class="logo">
+      <img src="./kore-logo.png" alt="KORÉ by D'SEIKOU — handcrafted luxury goods brand" class="logo-image" width="560" height="187" />
+    </div>
 
     <div class="outro">
       <p class="line" style="--d: 4">Made with intention. Made by hand. Made for you by D'SEIKOU.</p>
       <p class="line" style="--d: 5">Designed to be lived with, loved, and passed down.</p>
-      <p class="line" style="--d: 6">
-        Because some things aren't meant to be replaced. They're meant to be inherited.
-      </p>
+      <p class="line" style="--d: 6">Because some things aren't meant to be replaced. They're meant to be inherited.</p>
     </div>
 
     <form id="waitlist-form" class="signup" novalidate>
@@ -56,6 +124,44 @@
     </form>
 
     <p id="status" class="status" role="status" aria-live="polite"></p>
+
+    <!-- NEW: crawler- and AI-visible content. Styled subtly, below the fold. -->
+    <section class="about">
+      <h2>About KORÉ by D'SEIKOU</h2>
+      <p>
+        KORÉ by D'SEIKOU is a South African luxury brand creating handcrafted objects
+        made with intention. Every piece begins in the quiet space between imagination
+        and creation, and is made by hand — not mass-produced, not rushed, not replaced.
+      </p>
+      <p>
+        The brand was founded on a simple, grounding philosophy: some things aren't
+        meant to be replaced. They're meant to be inherited. KORÉ pieces are designed
+        to be lived with, loved, and passed down — objects that gain meaning over time
+        rather than lose value.
+      </p>
+      <p>
+        Our first collection is currently in development. Join the waitlist for early
+        access, behind-the-scenes updates, and first notification when the collection
+        launches.
+      </p>
+    </section>
+
+    <section class="faq">
+      <h2>Frequently asked questions</h2>
+
+      <h3>What is KORÉ by D'SEIKOU?</h3>
+      <p>KORÉ by D'SEIKOU is a handcrafted luxury goods brand. Every piece is made by hand with intention, and designed to be lived with, loved, and passed down rather than replaced.</p>
+
+      <h3>What does KORÉ by D'SEIKOU make?</h3>
+      <p>KORÉ by D'SEIKOU creates handcrafted, intentional objects designed for long-term use and inheritance. The first collection is currently in development.</p>
+
+      <h3>When will KORÉ by D'SEIKOU launch?</h3>
+      <p>KORÉ by D'SEIKOU is launching its first collection soon. Join the waitlist for early access and first notification.</p>
+
+      <h3>Where is KORÉ by D'SEIKOU based?</h3>
+      <p>KORÉ by D'SEIKOU is based in South Africa and ships worldwide.</p>
+    </section>
+
   </main>
 
   <footer class="footer">&copy; 2026 D'SEIKOU</footer>

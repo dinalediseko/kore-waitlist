@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kore.dseikou.co.za/sitemap.xml
