@@ -326,3 +326,147 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ---------- SEO content: quiet editorial blocks ---------- */
+
+.about,
+.faq {
+  max-width: 560px;
+  margin: 72px auto 0;
+  text-align: left;
+  font-family: Montserrat, system-ui, sans-serif;
+}
+
+.about-eyebrow,
+.faq-eyebrow {
+  margin: 0 0 24px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #8a8a84;
+}
+
+/* About — fine-print editorial */
+
+.about p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.85;
+  color: #4a4844;
+}
+
+.about p + p {
+  margin-top: 1.4em;
+}
+
+/* FAQ — minimal accordion */
+
+.faq {
+  margin-top: 64px;
+}
+
+.faq-item {
+  border-top: 1px solid rgba(17, 16, 15, 0.12);
+}
+
+.faq-item:last-child {
+  border-bottom: 1px solid rgba(17, 16, 15, 0.12);
+}
+
+.faq-item summary {
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+  padding: 20px 32px 20px 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink);
+  transition: color 0.25s ease;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  margin-top: -5px;
+  border-right: 1.5px solid var(--ink);
+  border-bottom: 1.5px solid var(--ink);
+  transform: rotate(45deg);
+  transition: transform 0.4s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(-135deg);
+}
+
+.faq-item summary:hover {
+  color: var(--gold);
+}
+
+.faq-item summary:hover::after {
+  border-color: var(--gold);
+}
+
+.faq-item p {
+  margin: 0;
+  padding: 0 0 22px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #4a4844;
+  animation: faq-fade 0.4s ease;
+}
+
+@keyframes faq-fade {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- Responsive tweak ---------- */
+
+@media (max-width: 560px) {
+  .about,
+  .faq {
+    margin-top: 56px;
+  }
+}
+
+/* ---------- Scroll reveal ---------- */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 1s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 1s cubic-bezier(0.2, 0.7, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Reduced motion: no fade, no shift — instant */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
